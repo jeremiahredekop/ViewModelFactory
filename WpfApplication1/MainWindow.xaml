@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:f="clr-namespace:WpfApplication1"
+        >
+    <Window.Resources>
+        <f:HomeViewModelFactory x:Key="Factory" />
+    </Window.Resources>
+    <Grid DataContext="{Binding ViewModel, Source={StaticResource Factory}}">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="168,123,0,0" Name="textBlock1" Text="{Binding Path=FirstName}" VerticalAlignment="Top" Width="224" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="168,152,0,0" Name="textBlock2" Text="{Binding Path=LastName}" VerticalAlignment="Top" Width="238" />
+    </Grid>
+</Window>
