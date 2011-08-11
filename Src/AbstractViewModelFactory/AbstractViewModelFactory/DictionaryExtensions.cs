@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-// This code is property of GeniusCode, LLC
-// Licensed under MS-PL
-
-namespace WpfApplication1
+namespace GeniusCode.Components.Mvvm
 {
-    public static class DictionaryHelpers
+    internal static class DictionaryHelpers
     {
         public static TValue GetIfExists<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key, TValue elseValueToReturn)
         {
@@ -52,10 +49,10 @@ namespace WpfApplication1
         {
             int count = 0;
             input.ToList().ForEach(o =>
-                {
-                    if (AddIfUnique<TInput, TKey>(dictionary, o, keySelector))
-                        count++;
-                });
+            {
+                if (AddIfUnique<TInput, TKey>(dictionary, o, keySelector))
+                    count++;
+            });
 
             return count;
         }
@@ -83,7 +80,7 @@ namespace WpfApplication1
 
 
 
-        public static int AddIfUniqueOrReplaceIf<TInput, TKey>(this Dictionary<TKey, TInput> dictionary, IEnumerable<TInput> input , Func<TInput, TKey> keySelector, Func<TInput, TInput, bool> replaceFunc)
+        public static int AddIfUniqueOrReplaceIf<TInput, TKey>(this Dictionary<TKey, TInput> dictionary, IEnumerable<TInput> input, Func<TInput, TKey> keySelector, Func<TInput, TInput, bool> replaceFunc)
         {
             int count = 0;
             input.ToList().ForEach(o =>

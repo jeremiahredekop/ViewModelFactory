@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelFactory.SL", "ViewModelFactory.SL\ViewModelFactory.SL.csproj", "{A9FC0DD2-541E-444F-86A2-2234B31B33D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelFactory.SL.Web", "ViewModelFactory.SL.Web\ViewModelFactory.SL.Web.csproj", "{9686D9D9-9BEB-4A74-8686-4F76BD7A611E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractViewModelFactory.Sl", "..\AbstractViewModelFactory\AbstractViewModelFactory.Sl\AbstractViewModelFactory.Sl.csproj", "{17435E8E-52A4-405C-A6E4-666252BD3D44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9FC0DD2-541E-444F-86A2-2234B31B33D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FC0DD2-541E-444F-86A2-2234B31B33D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FC0DD2-541E-444F-86A2-2234B31B33D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FC0DD2-541E-444F-86A2-2234B31B33D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9686D9D9-9BEB-4A74-8686-4F76BD7A611E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9686D9D9-9BEB-4A74-8686-4F76BD7A611E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9686D9D9-9BEB-4A74-8686-4F76BD7A611E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9686D9D9-9BEB-4A74-8686-4F76BD7A611E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17435E8E-52A4-405C-A6E4-666252BD3D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17435E8E-52A4-405C-A6E4-666252BD3D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17435E8E-52A4-405C-A6E4-666252BD3D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17435E8E-52A4-405C-A6E4-666252BD3D44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

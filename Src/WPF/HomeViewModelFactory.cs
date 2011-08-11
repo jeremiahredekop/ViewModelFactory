@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using GeniusCode.Components.Mvvm;
 
 // This code is property of GeniusCode, LLC
 // Licensed under MS-PL
@@ -10,22 +7,30 @@ namespace WpfApplication1
 {
     public class HomeViewModel
     {
-            public string FirstName{get;set;}
-            public string LastName {get;set;}
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 
-    public class HomeViewModelFactory : ViewModelFactory<HomeViewModel>
+    public class HomeViewModelFactory : AbstractViewModelFactory<HomeViewModel>
     {
-        protected override void OnViewLocatedAtRuntime(bool newInstance, HomeViewModel vm)
+        protected override HomeViewModel BuildViewModel()
         {
-            vm.FirstName = "Jeremiah";
-            vm.LastName = "Redekop";
+            var vm = new HomeViewModel();
+
+            if (DetectDesignMode())
+            {
+                vm.FirstName = "Jeremiah";
+                vm.LastName = "Redekop";
+            }
+            else
+            {
+                vm.FirstName = "Ryan";
+                vm.LastName = "Hatch";
+            }
+
+            return vm;
         }
 
-        protected override void OnViewModelLocatedAtDesignTime(HomeViewModel vm)
-        {
-            vm.FirstName = "Ryan";
-            vm.LastName = "Hatch";
-        }
+
     }
 }

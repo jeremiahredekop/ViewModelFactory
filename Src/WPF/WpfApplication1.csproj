@@ -56,10 +56,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="HomeViewModelFactory.cs" />
-    <Compile Include="Support\DictionaryHelpers.Shared.cs" />
-    <Compile Include="Support\InstanceBehaviorAttribute.cs" />
-    <Compile Include="Support\TypeExtensions.Shared.cs" />
-    <Compile Include="Support\ViewModelFactory.Shared.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,7 +93,12 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractViewModelFactory\AbstractViewModelFactory\AbstractViewModelFactory.csproj">
+      <Project>{30D8C7DE-3000-4AC7-99CA-0FEFEB6E977D}</Project>
+      <Name>AbstractViewModelFactory</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
